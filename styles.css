@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+ html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img{
+    height: 100%;
+    width:100%;
+    object-fit:cover;
+}
+
+p{
+    line-height:1.9rem;
+    font-size: 1.2rem;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+/*Hero sections*/
+#hero{
+    background-image: url(./img/profile.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:black;
+    opacity: .3;
+    z-index: -1;
+
+}
+
+.hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position : relative;
+    color:transparent;
+    animation: text_revile .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+
+
+#firstH3{
+    animation: text_revile_name .5s ease forwards;
+    animation-delay: 1s;
+}
+
+
+.allh1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    width: 0%;
+    border-radius:9px;
+    background-color : crimson;
+    animation: text_revile_box 1s ease;
+    animation-delay: 1s;
+}
+
+.cta{
+    display: block;
+    padding: 12px;
+    padding-left: 30px;
+    color: black;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing :.2rem;
+    width: 100%;
+    margin-left: -5px;
+    margin-top: 20px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.cta:hover{
+    background-color: crimson;
+    color: white;
+    
+}
+/*End of sections*/
+
+/* service section */
+
+#services{}
+#services .service{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#services .section-title{
+    font-size: 4rem;
+    font-weight: 5;
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+}
+
+#redcolor{
+    color: crimson;
+}
+
+#services .service-top p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 5;
+    letter-spacing: .05rem;
+}
+
+#services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#services .service-item{
+    flex-basis: 70%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 15px;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+#services .service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background-image: linear-gradient(60deg, #29323c, #485563 100%);
+    opacity: .8;
+    z-index: -1;
+
+}
+
+#services .service-item h2 {
+    color: white;
+    margin-bottom : 10px;
+
+}
+
+#services .service-item p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 5;
+    letter-spacing : 0.1rem;
+    line-height: 1.5rem;
+}
+
+/* end of service section */
+
+
+
+
+
+/* keyfranmes */
+
+@keyframes text_revile_box{
+    50% {
+        width: 100%;
+        left:0;
+    }
+
+    100% {
+        width: 0;
+        left:100%;
+    }
+}
+
+@keyframes text_revile{
+    100%{
+        color:white;
+    }
+
+}
+
+@keyframes text_revile_name{
+    100%{
+        color:crimson;
+        font-size: 3.5rem;
+    }
+}
+/* end of keyfranmes */
